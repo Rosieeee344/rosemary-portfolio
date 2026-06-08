@@ -102,13 +102,6 @@ export default function Hero() {
               >
                 View Projects
               </button>
-              <a
-                href="/assets/resume/Rosemary_Dwamena_Resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 border border-espresso-800 text-espresso-800 font-body text-sm font-medium tracking-wide hover:bg-espresso-800 hover:text-cream-100 transition-all duration-200 dark:border-cream-300 dark:text-cream-200 dark:hover:bg-cream-200 dark:hover:text-espresso-900"
-              >
-                Download Resume
-              </a>
               <button
                 onClick={() => scrollTo('#contact')}
                 className="inline-flex items-center gap-2 px-6 py-3 border border-espresso-800 text-espresso-800 font-body text-sm font-medium tracking-wide hover:bg-espresso-800 hover:text-cream-100 transition-all duration-200 dark:border-cream-300 dark:text-cream-200 dark:hover:bg-cream-200 dark:hover:text-espresso-900"

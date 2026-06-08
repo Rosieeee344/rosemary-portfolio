@@ -5,17 +5,9 @@ import { programmingSkills, toolsSkills, learningSkills, interests } from '../da
  */
 function SkillBar({ name, level }) {
   return (
-    <div className="space-y-2">
-      <div className="flex justify-between items-center">
-        <span className="font-mono text-sm text-espresso-800 dark:text-cream-200">{name}</span>
-        <span className="font-mono text-xs text-sand-500 dark:text-sand-400">{level}%</span>
-      </div>
-      <div className="h-1 w-full bg-cream-300 dark:bg-espresso-700 overflow-hidden">
-        <div
-          className="h-full bg-espresso-800 dark:bg-cream-300 transition-all duration-700"
-          style={{ width: `${level}%` }}
-        />
-      </div>
+    <div className="flex justify-between items-center py-2 border-b border-cream-300 dark:border-espresso-700">
+      <span className="font-mono text-sm text-espresso-800 dark:text-cream-200">{name}</span>
+      <span className="font-mono text-xs text-sand-500 dark:text-sand-400">{level}</span>
     </div>
   )
 }

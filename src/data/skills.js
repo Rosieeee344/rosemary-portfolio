@@ -2,16 +2,16 @@
  * Skills data
  */
 export const programmingSkills = [
-  { name: 'HTML', level: 80 },
-  { name: 'CSS', level: 70 },
-  { name: 'JavaScript', level: 60 },
-  { name: 'C++', level: 50 },
+  { name: 'HTML', level: 'Intermediate' },
+  { name: 'CSS', level: 'Intermediate' },
+  { name: 'JavaScript', level: 'Intermediate' },
+  { name: 'C++', level: 'Beginner' },
 ]
 
 export const toolsSkills = [
-  { name: 'Git', level: 70 },
-  { name: 'GitHub', level: 70 },
-  { name: 'VS Code', level: 70 },
+  { name: 'Git', level: 'Intermediate'},
+  { name: 'GitHub', level: 'Intermediate' },
+  { name: 'VS Code', level: 'Intermediate' },
 ]
 
 export const learningSkills = [

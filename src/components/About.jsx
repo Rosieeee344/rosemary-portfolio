@@ -100,15 +100,7 @@ export default function About() {
               digital products that improve everyday experiences.
             </p>
 
-            <div className="pt-4">
-              <a
-                href="/assets/resume/Rosemary_Dwamena_Resume.pdf"
-                download
-                className="inline-flex items-center gap-2 px-6 py-3 bg-espresso-800 text-cream-100 font-body text-sm font-medium tracking-wide hover:bg-espresso-700 transition-all duration-200 dark:bg-cream-200 dark:text-espresso-900 dark:hover:bg-cream-100"
-              >
-                Download Resume
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>

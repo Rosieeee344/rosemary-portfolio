@@ -99,13 +99,7 @@ export default function Hero() {
               >
                 View Projects
               </button>
-              <a
-                href="/assets/resume/Rosemary_Dwamena_Resume.pdf"
-                download
-                className="btn-outline"
-              >
-                Download Resume
-              </a>
+              
               <button
                 onClick={() => scrollToSection('#contact')}
                 className="btn-outline"

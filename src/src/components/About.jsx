@@ -60,15 +60,7 @@ export default function About() {
             </p>
 
             {/* CTA */}
-            <div className="pt-4">
-              <a
-                href="/assets/resume/Rosemary_Dwamena_Resume.pdf"
-                download
-                className="btn-primary w-fit"
-              >
-                Download Resume
-              </a>
-            </div>
+            
           </div>
         </div>
       </div>
