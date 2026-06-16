@@ -22,7 +22,7 @@ export const projects = [
     longDescription: 'A full-featured academic management platform for universities, providing tools for course management, student records, and administrative workflows.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'React Router', 'React Query', 'Supabase'],
     category: 'Web Apps',
-    liveUrl: 'https://acadex-web.replit.app/login',
+    liveUrl: 'https://acadex-ktu.vercel.app',
     githubUrl: null,
     image: '/assets/images/acadex.png',
     status: 'Live',
