@@ -1,6 +1,6 @@
 export default function About() {
   const highlights = [
-    { number: '2+', label: 'Years Learning' },
+    { number: '3+', label: 'Years Learning' },
     { number: '7+', label: 'Projects Built' },
     { number: '2', label: 'Internships' },
     { number: '1', label: 'Ambassador Role' },
