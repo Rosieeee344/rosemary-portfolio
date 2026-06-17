@@ -1,24 +1,15 @@
 /**
  * Skills data
  */
-export const programmingSkills = [
-  { name: 'HTML', level: 'Intermediate' },
-  { name: 'CSS', level: 'Intermediate' },
-  { name: 'JavaScript', level: 'Intermediate' },
-  { name: 'C++', level: 'Beginner' },
-]
-
-export const toolsSkills = [
-  { name: 'Git', level: 'Intermediate'},
-  { name: 'GitHub', level: 'Intermediate' },
-  { name: 'VS Code', level: 'Intermediate' },
-]
-
-export const learningSkills = [
+export const tools = [
+  'JavaScript',
+  'C++',
   'React.js',
   'Tailwind CSS',
   'Framer Motion',
-  'Backend Development',
+  'Git',
+  'GitHub',
+  'VS Code',
 ]
 
 export const interests = [
