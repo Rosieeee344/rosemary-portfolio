@@ -1,7 +1,7 @@
 export default function About() {
   const highlights = [
     { number: '3+', label: 'Years Learning' },
-    { number: '7+', label: 'Projects Built' },
+    { number: '3+', label: 'Projects Built' },
     { number: '2', label: 'Internships' },
     { number: '1', label: 'Ambassador Role' },
   ]
@@ -88,7 +88,7 @@ export default function About() {
               .
             </p>
             <p>
-              I enjoy creating websites and web-based tools, including a class attendance system.
+              I enjoy creating web applications and web-based tools, including a class attendance system.
               I am currently learning and building projects with{' '}
               <span className="font-medium text-espresso-900 dark:text-cream-100">
                 React.js, Tailwind CSS
@@ -96,8 +96,8 @@ export default function About() {
               , and modern frontend technologies.
             </p>
             <p>
-              My goal is to leverage technology to solve real-world challenges and build impactful
-              digital products that improve everyday experiences.
+              I am a team leader and developer at NovuTech, a group of students whose goal is to leverage technology to solve real-world challenges and build impactful
+              digital products that improve everyday experiences (our first project as a team is in the works).
             </p>
 
             

@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiMapPin, FiArrowDown } from 'react-icons/fi'
 
 const typingTexts = [
-  'Frontend Developer',
+  'She codes, She creates, She conquers.',
   'ICT Student',
-  'Future Software Engineer',
+  'Software Engineer in Training',
   'Tech Entrepreneur',
 ]
 
