@@ -186,7 +186,7 @@ export default function Hero() {
 
               {/* Floating stat */}
               <div className="absolute -bottom-6 -right-6 bg-cream-50 dark:bg-espresso-800 border border-cream-300 dark:border-espresso-700 px-4 py-3 shadow-lg">
-                <p className="font-display text-2xl font-light text-espresso-900 dark:text-cream-100">7+</p>
+                <p className="font-display text-2xl font-light text-espresso-900 dark:text-cream-100">3+</p>
                 <p className="font-mono text-xs text-sand-500 dark:text-sand-400">Projects Built</p>
               </div>
             </div>
