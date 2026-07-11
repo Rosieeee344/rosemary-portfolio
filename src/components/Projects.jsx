@@ -13,20 +13,13 @@ function ProjectCard({ project }) {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
+            loading="lazy"
           />
         ) : (
           <div className="p-4">
-            {project.status === 'In Development' ? (
-              <p className="font-mono text-xs text-sand-500 dark:text-sand-400">Coming Soon</p>
-            ) : (
-              <p className="font-mono text-xs text-sand-500 dark:text-sand-400">
-                Add screenshot at
-                <br />
-                <span className="text-sand-700 dark:text-sand-300">
-                  {'/assets/images/' + project.title.toLowerCase().replace(/\s+/g, '-') + '.png'}
-                </span>
-              </p>
-            )}
+            <p className="font-mono text-xs text-sand-500 dark:text-sand-400">
+              {project.status === 'In Development' ? 'Coming Soon' : 'Screenshot coming'}
+            </p>
           </div>
         )}
 
@@ -40,6 +33,13 @@ function ProjectCard({ project }) {
         >
           {project.status === 'Live' ? '● Live' : '◌ In Dev'}
         </div>
+
+        {/* Featured badge */}
+        {project.featured && (
+          <div className="absolute top-2 left-2 px-2 py-0.5 font-mono text-xs border border-sand-400 dark:border-sand-600 bg-cream-50 dark:bg-espresso-800 text-sand-700 dark:text-sand-300">
+            Featured
+          </div>
+        )}
       </div>
 
       {/* Content */}
@@ -47,9 +47,21 @@ function ProjectCard({ project }) {
         <h3 className="font-display text-xl font-light text-espresso-900 dark:text-cream-100 mb-2">
           {project.title}
         </h3>
-        <p className="font-body text-sm text-espresso-600 dark:text-cream-400 leading-relaxed mb-4 flex-1">
-          {project.description}
+        <p className="font-body text-sm text-espresso-600 dark:text-cream-400 leading-relaxed mb-3 flex-1">
+          {project.longDescription || project.description}
         </p>
+
+        {/* Challenge (if available) */}
+        {project.challenge && (
+          <div className="mb-4 p-3 bg-cream-100 dark:bg-espresso-700 border-l-2 border-sand-400 dark:border-sand-600">
+            <p className="font-mono text-xs text-sand-600 dark:text-sand-400 mb-1 uppercase tracking-wider">
+              What I Learned
+            </p>
+            <p className="font-body text-xs text-espresso-600 dark:text-cream-400 leading-relaxed">
+              {project.challenge}
+            </p>
+          </div>
+        )}
 
         {/* Tech tags */}
         <div className="flex flex-wrap gap-1.5 mb-5">
@@ -81,7 +93,7 @@ function ProjectCard({ project }) {
               href={project.githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-1.5 font-mono text-xs text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100 transition-colors"
+              className="flex items-center gap-1.5 font-mono text-xs text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100 transition-colors border border-current px-3 py-1.5"
             >
               <FiGithub size={12} strokeWidth={1.5} />
               Source
@@ -99,7 +111,7 @@ function ProjectCard({ project }) {
   )
 }
 
-export default function Projects() {
+export default function Projects({ showHeading = true, showBorder = true }) {
   const [activeCategory, setActiveCategory] = useState('All')
 
   const filtered =
@@ -110,20 +122,24 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 border-t border-cream-300 dark:border-espresso-700"
+      className={`py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 ${
+        showBorder ? 'border-t border-cream-300 dark:border-espresso-700' : ''
+      }`}
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div className="mb-10">
-          <p className="font-mono text-xs tracking-widest uppercase text-sand-600 dark:text-sand-400 mb-4">
-            What I have built
-          </p>
-          <h2 className="font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
-            Projects
-          </h2>
-          <div className="w-12 h-px bg-sand-400 dark:bg-sand-600 my-6" />
-        </div>
+        {showHeading && (
+          <div className="mb-10">
+            <p className="font-mono text-xs tracking-widest uppercase text-sand-600 dark:text-sand-400 mb-4">
+              What I have built
+            </p>
+            <h2 className="font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
+              Projects
+            </h2>
+            <div className="w-12 h-px bg-sand-400 dark:bg-sand-600 my-6" />
+          </div>
+        )}
 
         {/* Filter buttons */}
         <div className="flex flex-wrap gap-2 mb-10">

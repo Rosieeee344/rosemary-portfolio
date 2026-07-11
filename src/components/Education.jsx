@@ -15,10 +15,11 @@ export default function Education() {
           <div className="divider" />
         </div>
 
-        {/* Education card */}
-        <div className="max-w-2xl">
+        {/* Education cards */}
+        <div className="max-w-2xl space-y-6">
+
+          {/* BTech ICT */}
           <div className="card relative overflow-hidden">
-            {/* Decorative corner */}
             <div className="absolute top-0 right-0 w-24 h-24 bg-cream-200 dark:bg-espresso-700 opacity-50" style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }} />
 
             <div className="flex items-start gap-5 mb-6">
@@ -46,13 +47,39 @@ export default function Education() {
 
               <div className="flex items-center gap-2 text-sm text-sand-600 dark:text-sand-400">
                 <FiCalendar size={14} strokeWidth={1.5} />
-                <span className="font-mono text-xs">Expected Graduation: 2030</span>
+                <span className="font-mono text-xs">2026 &mdash; 2030</span>
               </div>
 
               <div className="flex flex-wrap gap-2 pt-2">
                 {['Web Development', 'Software Engineering', 'Networking', 'Database Systems', 'IT Management'].map(subject => (
                   <span key={subject} className="tag">{subject}</span>
                 ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Diploma */}
+          <div className="card relative overflow-hidden">
+            <div className="flex items-start gap-5 mb-4">
+              <div className="flex-shrink-0 w-12 h-12 border border-sand-300 dark:border-sand-700 flex items-center justify-center text-sand-600 dark:text-sand-400">
+                <FiBook size={20} strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="font-display text-2xl font-light text-espresso-900 dark:text-cream-100">
+                  Koforidua Technical University
+                </h3>
+                <p className="font-mono text-sm text-sand-600 dark:text-sand-400 mt-1">Koforidua, Ghana</p>
+              </div>
+            </div>
+
+            <div className="space-y-2 pl-17">
+              <p className="font-mono text-xs tracking-widest uppercase text-sand-500 dark:text-sand-500">Diploma Programme</p>
+              <p className="font-display text-lg font-light text-espresso-800 dark:text-cream-200">
+                Information and Communication Technology
+              </p>
+              <div className="flex items-center gap-2 text-sm text-sand-600 dark:text-sand-400">
+                <FiCalendar size={14} strokeWidth={1.5} />
+                <span className="font-mono text-xs">2024 &mdash; 2025</span>
               </div>
             </div>
           </div>

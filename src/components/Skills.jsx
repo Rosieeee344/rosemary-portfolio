@@ -14,7 +14,7 @@ export default function Skills() {
 
         {/* Tools Badge Grid */}
         <p className="font-mono text-sm text-sand-500 dark:text-sand-400 mb-6">
-          My toolkit grows with every project. Here's what I've been working with lately:
+          My toolkit grows with every project. Here&apos;s what I&apos;ve been working with lately:
         </p>
         <div className="flex flex-wrap gap-3 mb-14">
           {tools.map((tool) => (

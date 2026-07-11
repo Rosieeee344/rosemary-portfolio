@@ -1,14 +1,14 @@
+import { Link } from 'react-router-dom'
 import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
 
 export default function Footer() {
   const year = new Date().getFullYear()
 
   const navLinks = [
-    { label: 'About', href: '#about' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Blog', href: '#blog' },
-    { label: 'Contact', href: '#contact' },
+    { label: 'About', to: '/about' },
+    { label: 'Journey', to: '/journey' },
+    { label: 'Field Notes', to: '/field-notes' },
+    { label: 'Projects', to: '/projects' },
   ]
 
   const socials = [
@@ -18,17 +18,11 @@ export default function Footer() {
     { href: 'mailto:rdwamena36@gmail.com', icon: FiMail, label: 'Email' },
   ]
 
-  const handleNavClick = (href) => {
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <footer className="border-t border-cream-300 dark:border-espresso-700 bg-cream-50 dark:bg-espresso-900">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 xl:px-32 py-16">
-
         {/* Top grid */}
         <div className="grid md:grid-cols-3 gap-10 mb-14">
-
           {/* Brand */}
           <div className="md:col-span-1">
             <p className="font-display text-2xl font-light text-espresso-900 dark:text-cream-100 mb-2">
@@ -46,13 +40,13 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2">
               {navLinks.map((link) => (
-                <li key={link.label}>
-                  <button
-                    onClick={() => handleNavClick(link.href)}
+                <li key={link.to}>
+                  <Link
+                    to={link.to}
                     className="font-body text-sm text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100 transition-colors"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

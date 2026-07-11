@@ -96,7 +96,7 @@ export default function About() {
               , and modern frontend technologies.
             </p>
             <p>
-              I am a team leader and developer at NovuTech, a group of students whose goal is to leverage technology to solve real-world challenges and build impactful
+              I am a team leader and developer at NovuTech, a group of students dev team, whose goal is to leverage technology to solve real-world challenges and build impactful
               digital products that improve everyday experiences (our first project as a team is in the works).
             </p>
 

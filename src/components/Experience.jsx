@@ -45,7 +45,7 @@ export default function Experience() {
 
         {/* Heading */}
         <div className="mb-14">
-          <p className="section-subtitle">Where I've been</p>
+          <p className="section-subtitle">Where I&apos;ve been</p>
           <h2 className="section-title">Experience</h2>
           <div className="divider" />
         </div>

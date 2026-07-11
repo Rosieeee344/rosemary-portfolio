@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiMapPin, FiArrowDown } from 'react-icons/fi'
 
 const typingTexts = [
@@ -91,17 +92,17 @@ export default function Hero() {
               Building scalable, efficient, and user-friendly digital solutions.
             </p>
             <p className="font-body text-sm text-sand-600 dark:text-sand-400 leading-relaxed max-w-md mb-10">
-              ICT Student passionate about robotics, startups, mental health, and building products that solve real-world problems.
+              ICT Student | Open Source Contributor | Xolace Ambassador | Student Leader | Learning in public, building full-stack applications, and turning ideas into code.
             </p>
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 mb-12">
-              <button
-                onClick={() => scrollTo('#projects')}
+              <Link
+                to="/projects"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-espresso-800 text-cream-100 font-body text-sm font-medium tracking-wide hover:bg-espresso-700 transition-all duration-200 dark:bg-cream-200 dark:text-espresso-900 dark:hover:bg-cream-100"
               >
                 View Projects
-              </button>
+              </Link>
               <button
                 onClick={() => scrollTo('#contact')}
                 className="inline-flex items-center gap-2 px-6 py-3 border border-espresso-800 text-espresso-800 font-body text-sm font-medium tracking-wide hover:bg-espresso-800 hover:text-cream-100 transition-all duration-200 dark:border-cream-300 dark:text-cream-200 dark:hover:bg-cream-200 dark:hover:text-espresso-900"

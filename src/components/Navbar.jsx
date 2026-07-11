@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react'
+import { Link, NavLink, useLocation } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Blog', href: '#blog' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'About', to: '/about' },
+  { label: 'Journey', to: '/journey' },
+  { label: 'Field Notes', to: '/field-notes' },
+  { label: 'Projects', to: '/projects' },
 ]
 
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -21,11 +21,30 @@ export default function Navbar({ theme, toggleTheme }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleNavClick = (href) => {
+  useEffect(() => {
     setMenuOpen(false)
-    const target = document.querySelector(href)
-    if (target) target.scrollIntoView({ behavior: 'smooth' })
-  }
+  }, [location.pathname])
+
+  useEffect(() => {
+    document.body.style.overflow = menuOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [menuOpen])
+
+  const linkClass = ({ isActive }) =>
+    `font-body text-sm tracking-wide transition-colors duration-150 pb-0.5 ${
+      isActive
+        ? 'text-espresso-900 dark:text-cream-100 border-b border-sand-400 dark:border-sand-500'
+        : 'text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100'
+    }`
+
+  const mobileLinkClass = (isActive) =>
+    `font-display text-3xl font-light transition-colors ${
+      isActive
+        ? 'text-espresso-900 dark:text-cream-100'
+        : 'text-espresso-800 dark:text-cream-100 hover:text-sand-600 dark:hover:text-sand-400'
+    }`
 
   return (
     <>
@@ -37,25 +56,21 @@ export default function Navbar({ theme, toggleTheme }) {
         }`}
       >
         <nav className="max-w-7xl mx-auto px-6 md:px-12 lg:px-20 h-16 flex items-center justify-between">
-
           {/* Logo */}
-          <a
-            href="#"
+          <Link
+            to="/"
             className="font-display text-xl font-light tracking-wide text-espresso-800 dark:text-cream-100 hover:text-sand-600 dark:hover:text-sand-400 transition-colors"
           >
             RBD
-          </a>
+          </Link>
 
           {/* Desktop nav links */}
           <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <li key={link.label}>
-                <button
-                  onClick={() => handleNavClick(link.href)}
-                  className="font-body text-sm text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100 tracking-wide transition-colors duration-150"
-                >
+              <li key={link.to}>
+                <NavLink to={link.to} end={link.to === '/'} className={linkClass}>
                   {link.label}
-                </button>
+                </NavLink>
               </li>
             ))}
           </ul>
@@ -81,13 +96,14 @@ export default function Navbar({ theme, toggleTheme }) {
         }`}
       >
         {navLinks.map((link) => (
-          <button
-            key={link.label}
-            onClick={() => handleNavClick(link.href)}
-            className="font-display text-3xl font-light text-espresso-800 dark:text-cream-100 hover:text-sand-600 dark:hover:text-sand-400 transition-colors"
+          <NavLink
+            key={link.to}
+            to={link.to}
+            end={link.to === '/'}
+            className={({ isActive }) => mobileLinkClass(isActive)}
           >
             {link.label}
-          </button>
+          </NavLink>
         ))}
       </div>
     </>
