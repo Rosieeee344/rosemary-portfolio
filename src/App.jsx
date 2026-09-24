@@ -3,10 +3,8 @@ import { useTheme } from './hooks/useTheme'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
-import AboutPage from './pages/AboutPage'
-import JourneyPage from './pages/JourneyPage'
 import FieldNotesPage from './pages/FieldNotesPage'
-import ProjectsPage from './pages/ProjectsPage'
+import FieldNotePage from './pages/FieldNotePage'
 
 /**
  * App — root component with theme context and top-level routing.
@@ -19,10 +17,8 @@ function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/journey" element={<JourneyPage />} />
         <Route path="/field-notes" element={<FieldNotesPage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/field-notes/:slug" element={<FieldNotePage />} />
       </Routes>
       <Footer />
     </div>

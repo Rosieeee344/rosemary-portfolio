@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { FiMail, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiSend } from 'react-icons/fi'
+import { FiMail, FiMapPin, FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiSend } from 'react-icons/fi'
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -29,16 +29,22 @@ export default function Contact() {
       handle: '@Rosieeee344',
     },
     {
-      href: 'https://www.linkedin.com/in/dwamena-rosemary-80b3a03b7',
+      href: 'https://www.linkedin.com/in/rosemaryboahemaa',
       icon: FiLinkedin,
       label: 'LinkedIn',
-      handle: 'Dwamena Rosemary',
+      handle: 'Rosemary Boahemaa Dwamena',
     },
     {
       href: 'https://x.com/dwamen1dwamena',
       icon: FiTwitter,
       label: 'Twitter / X',
       handle: '@dwamen1dwamena',
+    },
+    {
+      href: 'https://www.instagram.com/_rosemaryboahemaa?stkn=MWszN3o1czJrc2ZrYQ%3D%3D&utm_source=qr',
+      icon: FiInstagram,
+      label: 'Instagram',
+      handle: '_rosemaryboahemaa',
     },
   ]
 
@@ -48,16 +54,16 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 border-t border-cream-300 dark:border-espresso-700"
+      className="py-16 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 border-t border-cream-300 dark:border-espresso-700"
     >
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div className="mb-14">
+        <div className="mb-10">
           <p className="font-mono text-xs tracking-widest uppercase text-sand-600 dark:text-sand-400 mb-4">
             Get in touch
           </p>
-          <h2 className="font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
+          <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
             Contact
           </h2>
           <div className="w-12 h-px bg-sand-400 dark:bg-sand-600 my-6" />

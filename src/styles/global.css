@@ -33,16 +33,21 @@
   ::-webkit-scrollbar-thumb {
     @apply bg-sand-400 dark:bg-sand-600 rounded-full;
   }
+
+  /* Offset anchored sections so they aren't hidden behind the fixed header */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
 }
 
 /* ─── Component Layer ────────────────────────────────────── */
 @layer components {
   .section-padding {
-    @apply py-24 px-6 md:px-12 lg:px-20 xl:px-32;
+    @apply py-16 px-6 md:px-12 lg:px-20 xl:px-32;
   }
 
   .section-title {
-    @apply font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100;
+    @apply font-display text-3xl md:text-4xl font-light tracking-wide text-espresso-800 dark:text-cream-100;
   }
 
   .section-subtitle {

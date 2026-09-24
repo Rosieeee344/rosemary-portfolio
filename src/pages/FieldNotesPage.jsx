@@ -1,22 +1,26 @@
+import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
 import PageHeading from '../components/PageHeading'
 import { blogPosts } from '../data/blogPosts'
 
 function ArticleCard({ post }) {
   return (
-    <article className="card group cursor-pointer hover:translate-y-[-2px] transition-transform duration-200">
-      <div className="flex items-center justify-between mb-4">
+    <Link
+      to={`/field-notes/${post.slug}`}
+      className="card group block hover:translate-y-[-2px] transition-transform duration-200"
+    >
+      <div className="flex items-center justify-between mb-3">
         <span className="tag">{post.category}</span>
         <span className="font-mono text-xs text-sand-500 dark:text-sand-500">
           {post.readTime}
         </span>
       </div>
 
-      <h2 className="font-display text-xl font-light text-espresso-900 dark:text-cream-100 leading-snug mb-3 group-hover:text-sand-700 dark:group-hover:text-sand-300 transition-colors">
+      <h2 className="font-display text-xl font-light text-espresso-900 dark:text-cream-100 leading-snug mb-2 group-hover:text-sand-700 dark:group-hover:text-sand-300 transition-colors">
         {post.title}
       </h2>
 
-      <p className="font-body text-sm text-espresso-600 dark:text-cream-400 leading-relaxed mb-5">
+      <p className="font-body text-sm text-espresso-600 dark:text-cream-400 leading-relaxed mb-4">
         {post.excerpt}
       </p>
 
@@ -28,7 +32,7 @@ function ArticleCard({ post }) {
           Read more <FiArrowRight size={12} strokeWidth={1.5} />
         </span>
       </div>
-    </article>
+    </Link>
   )
 }
 
@@ -46,15 +50,6 @@ export default function FieldNotesPage() {
           {blogPosts.map((post) => (
             <ArticleCard key={post.id} post={post} />
           ))}
-        </div>
-
-        <div className="mt-14 pt-10 border-t border-cream-300 dark:border-espresso-700 text-center">
-          <p className="font-mono text-xs text-sand-500 dark:text-sand-500">
-            More notes in progress.&nbsp;
-            <span className="text-espresso-700 dark:text-cream-300">
-              I write about things I&rsquo;m figuring out — check back or follow me on GitHub.
-            </span>
-          </p>
         </div>
       </div>
     </main>

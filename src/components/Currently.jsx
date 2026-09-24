@@ -1,20 +1,20 @@
 import { FiZap, FiCode } from 'react-icons/fi'
 
-const learning = ['React', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind CSS']
+const learning = ['Web Development', 'Mobile Development', 'Product Design', 'Etc.' ]
 
-const building = ['SkillSwap — a peer-to-peer skill exchange platform', 'Class attendance system for KTU']
+const building = ['Seemul — a peer-to-peer skill exchange platform', 'Class attendance system for KTU', 'RoreDevs website', 'Etc.']
 
 export default function Currently() {
   return (
     <section
       id="currently"
-      className="py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 border-t border-cream-300 dark:border-espresso-700"
+      className="py-16 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 border-t border-cream-300 dark:border-espresso-700"
     >
       <div className="max-w-7xl mx-auto">
         <p className="font-mono text-xs tracking-widest uppercase text-sand-600 dark:text-sand-400 mb-4">
           Right Now
         </p>
-        <h2 className="font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
+        <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
           Currently
         </h2>
         <div className="w-12 h-px bg-sand-400 dark:bg-sand-600 my-6" />

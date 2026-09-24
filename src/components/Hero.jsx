@@ -1,12 +1,11 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { FiGithub, FiLinkedin, FiTwitter, FiMail, FiMapPin, FiArrowDown } from 'react-icons/fi'
 
 const typingTexts = [
-  'She codes, She creates, She conquers.',
-  'ICT Student',
-  'Software Engineer in Training',
-  'Tech Entrepreneur',
+  'A little bit of everything.',
+  'Core Maintainer at Codetopia Community.',
+  'Student Developer.',
+  'Tech Entrepreneur.',
 ]
 
 export default function Hero() {
@@ -77,7 +76,7 @@ export default function Hero() {
 
             {/* Role tags */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {['Course Representative', 'Xolace Ambassador', 'ICT Student'].map((role) => (
+              {['Core Maintainer', 'Xolace Ambassador', 'Student Developer'].map((role) => (
                 <span
                   key={role}
                   className="inline-flex items-center px-3 py-1 text-xs font-mono tracking-wide bg-cream-200 dark:bg-espresso-700 text-sand-700 dark:text-sand-300 border border-cream-300 dark:border-espresso-600"
@@ -92,17 +91,17 @@ export default function Hero() {
               Building scalable, efficient, and user-friendly digital solutions.
             </p>
             <p className="font-body text-sm text-sand-600 dark:text-sand-400 leading-relaxed max-w-md mb-10">
-              ICT Student | Open Source Contributor | Xolace Ambassador | Student Leader | Learning in public, building full-stack applications, and turning ideas into code.
+              Student Developer |Core Maintainer, Codetopia Community | Xolace Ambassador | Technical team @ <a href="https://sprintelex.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-espresso-800 dark:hover:text-cream-200 transition-colors">SprinTelex</a> | COMPSSA KTU secretary to the Organizer | Student Leader
             </p>
 
             {/* CTA buttons */}
             <div className="flex flex-wrap gap-3 mb-12">
-              <Link
-                to="/projects"
+              <button
+                onClick={() => scrollTo('#projects')}
                 className="inline-flex items-center gap-2 px-6 py-3 bg-espresso-800 text-cream-100 font-body text-sm font-medium tracking-wide hover:bg-espresso-700 transition-all duration-200 dark:bg-cream-200 dark:text-espresso-900 dark:hover:bg-cream-100"
               >
                 View Projects
-              </Link>
+              </button>
               <button
                 onClick={() => scrollTo('#contact')}
                 className="inline-flex items-center gap-2 px-6 py-3 border border-espresso-800 text-espresso-800 font-body text-sm font-medium tracking-wide hover:bg-espresso-800 hover:text-cream-100 transition-all duration-200 dark:border-cream-300 dark:text-cream-200 dark:hover:bg-cream-200 dark:hover:text-espresso-900"
@@ -123,7 +122,7 @@ export default function Hero() {
                 <FiGithub size={18} strokeWidth={1.5} />
               </a>
               <a
-                href="https://www.linkedin.com/in/dwamena-rosemary-80b3a03b7"
+                href="https://www.linkedin.com/in/rosemaryboahemaa"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"

@@ -10,7 +10,7 @@ export default function PageHeading({ eyebrow, title, description }) {
           {eyebrow}
         </p>
       )}
-      <h1 className="font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
+      <h1 className="font-display text-3xl md:text-4xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
         {title}
       </h1>
       <div className="w-12 h-px bg-sand-400 dark:bg-sand-600 my-6" />

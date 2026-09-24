@@ -122,7 +122,7 @@ export default function Projects({ showHeading = true, showBorder = true }) {
   return (
     <section
       id="projects"
-      className={`py-24 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 ${
+      className={`py-16 px-6 md:px-12 lg:px-20 xl:px-32 bg-cream-50 dark:bg-espresso-900 ${
         showBorder ? 'border-t border-cream-300 dark:border-espresso-700' : ''
       }`}
     >
@@ -134,7 +134,7 @@ export default function Projects({ showHeading = true, showBorder = true }) {
             <p className="font-mono text-xs tracking-widest uppercase text-sand-600 dark:text-sand-400 mb-4">
               What I have built
             </p>
-            <h2 className="font-display text-4xl md:text-5xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
+            <h2 className="font-display text-3xl md:text-4xl font-light tracking-wide text-espresso-800 dark:text-cream-100 mb-6">
               Projects
             </h2>
             <div className="w-12 h-px bg-sand-400 dark:bg-sand-600 my-6" />

@@ -1,19 +1,29 @@
 import { useState, useEffect } from 'react'
-import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 import { Menu, X } from 'lucide-react'
 
+/**
+ * Navigation links point to sections on the home page (id anchors).
+ * The logo links home; deeper pages (About, Field Notes, Projects, etc.)
+ * remain reachable from the footer.
+ */
 const navLinks = [
-  { label: 'About', to: '/about' },
-  { label: 'Journey', to: '/journey' },
-  { label: 'Field Notes', to: '/field-notes' },
-  { label: 'Projects', to: '/projects' },
+  { label: 'Home', id: 'hero' },
+  { label: 'About', id: 'about' },
+  { label: 'Education', id: 'education' },
+  { label: 'Experience', id: 'experience' },
+  { label: 'Projects', id: 'projects' },
+  { label: 'Awards', id: 'awards' },
+  { label: 'Blog', id: 'blog' },
+  { label: 'Contact', id: 'contact' },
 ]
 
 export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
   const location = useLocation()
+  const navigate = useNavigate()
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 40)
@@ -32,19 +42,20 @@ export default function Navbar({ theme, toggleTheme }) {
     }
   }, [menuOpen])
 
-  const linkClass = ({ isActive }) =>
-    `font-body text-sm tracking-wide transition-colors duration-150 pb-0.5 ${
-      isActive
-        ? 'text-espresso-900 dark:text-cream-100 border-b border-sand-400 dark:border-sand-500'
-        : 'text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100'
-    }`
+  const handleNav = (id) => {
+    setMenuOpen(false)
+    if (location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: id } })
+    } else {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
 
-  const mobileLinkClass = (isActive) =>
-    `font-display text-3xl font-light transition-colors ${
-      isActive
-        ? 'text-espresso-900 dark:text-cream-100'
-        : 'text-espresso-800 dark:text-cream-100 hover:text-sand-600 dark:hover:text-sand-400'
-    }`
+  const linkClass =
+    'font-body text-sm tracking-wide transition-colors duration-150 pb-0.5 text-espresso-700 dark:text-cream-300 hover:text-espresso-900 dark:hover:text-cream-100'
+
+  const mobileLinkClass =
+    'font-display text-3xl font-light transition-colors text-espresso-800 dark:text-cream-100 hover:text-sand-600 dark:hover:text-sand-400'
 
   return (
     <>
@@ -65,12 +76,12 @@ export default function Navbar({ theme, toggleTheme }) {
           </Link>
 
           {/* Desktop nav links */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navLinks.map((link) => (
-              <li key={link.to}>
-                <NavLink to={link.to} end={link.to === '/'} className={linkClass}>
+              <li key={link.id}>
+                <button onClick={() => handleNav(link.id)} className={linkClass}>
                   {link.label}
-                </NavLink>
+                </button>
               </li>
             ))}
           </ul>
@@ -79,7 +90,7 @@ export default function Navbar({ theme, toggleTheme }) {
           <div className="flex items-center gap-2">
             <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             <button
-              className="md:hidden p-2 text-espresso-800 dark:text-cream-200"
+              className="lg:hidden p-2 text-espresso-800 dark:text-cream-200"
               onClick={() => setMenuOpen(!menuOpen)}
               aria-label="Toggle menu"
             >
@@ -96,14 +107,13 @@ export default function Navbar({ theme, toggleTheme }) {
         }`}
       >
         {navLinks.map((link) => (
-          <NavLink
-            key={link.to}
-            to={link.to}
-            end={link.to === '/'}
-            className={({ isActive }) => mobileLinkClass(isActive)}
+          <button
+            key={link.id}
+            onClick={() => handleNav(link.id)}
+            className={mobileLinkClass}
           >
             {link.label}
-          </NavLink>
+          </button>
         ))}
       </div>
     </>

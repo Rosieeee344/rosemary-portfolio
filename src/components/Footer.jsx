@@ -1,20 +1,24 @@
 import { Link } from 'react-router-dom'
-import { FiGithub, FiLinkedin, FiTwitter, FiMail } from 'react-icons/fi'
+import { FiGithub, FiLinkedin, FiTwitter, FiInstagram, FiMail } from 'react-icons/fi'
 
 export default function Footer() {
   const year = new Date().getFullYear()
 
   const navLinks = [
-    { label: 'About', to: '/about' },
-    { label: 'Journey', to: '/journey' },
+    { label: 'About', to: '/#about' },
+    { label: 'Education', to: '/#education' },
+    { label: 'Experience', to: '/#experience' },
+    { label: 'Projects', to: '/#projects' },
+    { label: 'Awards & Honors', to: '/#awards' },
     { label: 'Field Notes', to: '/field-notes' },
-    { label: 'Projects', to: '/projects' },
+    { label: 'Contact', to: '/#contact' },
   ]
 
   const socials = [
     { href: 'https://github.com/Rosieeee344', icon: FiGithub, label: 'GitHub' },
-    { href: 'https://www.linkedin.com/in/dwamena-rosemary-80b3a03b7', icon: FiLinkedin, label: 'LinkedIn' },
+    { href: 'https://www.linkedin.com/in/rosemaryboahemaa', icon: FiLinkedin, label: 'LinkedIn' },
     { href: 'https://x.com/dwamen1dwamena', icon: FiTwitter, label: 'Twitter / X' },
+    { href: 'https://www.instagram.com/_rosemaryboahemaa?stkn=MWszN3o1czJrc2ZrYQ%3D%3D&utm_source=qr', icon: FiInstagram, label: 'Instagram' },
     { href: 'mailto:rdwamena36@gmail.com', icon: FiMail, label: 'Email' },
   ]
 
