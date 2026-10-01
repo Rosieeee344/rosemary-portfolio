@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { FiArrowRight } from 'react-icons/fi'
+import Seo from '../components/Seo'
 import PageHeading from '../components/PageHeading'
 import { blogPosts } from '../data/blogPosts'
 
@@ -38,7 +39,14 @@ function ArticleCard({ post }) {
 
 export default function FieldNotesPage() {
   return (
-    <main className="section-padding pt-32 bg-cream-100 dark:bg-espresso-900 min-h-screen">
+    <>
+      <Seo
+        title="Field Notes — Rosemary Boahemaa Dwamena"
+        description="Short reflections from Rosemary Boahemaa Dwamena on building software, lessons from internships, and learning as a student software developer."
+        path="/field-notes"
+        type="website"
+      />
+      <main className="section-padding pt-32 bg-cream-100 dark:bg-espresso-900 min-h-screen">
       <div className="max-w-7xl mx-auto">
         <PageHeading
           eyebrow="Field Notes"
@@ -52,6 +60,7 @@ export default function FieldNotesPage() {
           ))}
         </div>
       </div>
-    </main>
+      </main>
+    </>
   )
 }

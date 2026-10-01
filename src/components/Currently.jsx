@@ -2,7 +2,7 @@ import { FiZap, FiCode } from 'react-icons/fi'
 
 const learning = ['Web Development', 'Mobile Development', 'Product Design', 'Etc.' ]
 
-const building = ['Seemul — a peer-to-peer skill exchange platform', 'Class attendance system for KTU', 'RoreDevs website', 'Etc.']
+const building = ['Seemul app and website— a peer-to-peer skill exchange platform', 'Class attendance system for KTU', 'RoreDevs website', 'Etc.']
 
 export default function Currently() {
   return (

@@ -76,7 +76,7 @@ export default function Hero() {
 
             {/* Role tags */}
             <div className="flex flex-wrap gap-2 mb-6">
-              {['Core Maintainer', 'Xolace Ambassador', 'Student Developer'].map((role) => (
+              {['Core Maintainer', 'Xolace Ambassador', 'Student Developer', 'Founder & Team Lead at RoreDevs', 'Best ICT Student, COMPSSA KTU Awards 2026'].map((role) => (
                 <span
                   key={role}
                   className="inline-flex items-center px-3 py-1 text-xs font-mono tracking-wide bg-cream-200 dark:bg-espresso-700 text-sand-700 dark:text-sand-300 border border-cream-300 dark:border-espresso-600"
@@ -91,7 +91,7 @@ export default function Hero() {
               Building scalable, efficient, and user-friendly digital solutions.
             </p>
             <p className="font-body text-sm text-sand-600 dark:text-sand-400 leading-relaxed max-w-md mb-10">
-              Student Developer |Core Maintainer, Codetopia Community | Xolace Ambassador | Technical team @ <a href="https://sprintelex.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-espresso-800 dark:hover:text-cream-200 transition-colors">SprinTelex</a> | COMPSSA KTU secretary to the Organizer | Student Leader
+              Student Developer | Core Maintainer, Codetopia Community | Xolace Ambassador | Technical team @ <a href="https://sprintelex.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-espresso-800 dark:hover:text-cream-200 transition-colors">SprinTelex</a> | COMPSSA KTU secretary to the Organizer | Student Leader | Best ICT Student, COMPSSA KTU Awards 2026
             </p>
 
             {/* CTA buttons */}

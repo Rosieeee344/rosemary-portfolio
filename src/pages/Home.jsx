@@ -1,5 +1,7 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
+import Seo from '../components/Seo'
+import { profilePageJsonLd } from '../data/site'
 import Hero from '../components/Hero'
 import About from '../components/About'
 import Currently from '../components/Currently'
@@ -31,17 +33,26 @@ export default function Home() {
   }, [location])
 
   return (
-    <main>
-      <Hero />
-      <About />
-      <Currently />
-      <Experience />
-      <Education />
-      <Projects />
-      <Awards />
-      <Blog />
-      <GithubActivity />
-      <Contact />
-    </main>
+    <>
+      <Seo
+        title="Rosemary Boahemaa Dwamena — Student Software Developer"
+        description="Rosemary Boahemaa Dwamena is a student software developer, team lead at RoreDevs, Core maintainer at Codetopia Community, technical team at SprinTelex, and BTech ICT student in Koforidua Technical University, Ghana. Explore her projects, experience, education, awards, and field notes."
+        path="/"
+        type="website"
+        jsonLd={profilePageJsonLd}
+      />
+      <main>
+        <Hero />
+        <About />
+        <Currently />
+        <Experience />
+        <Education />
+        <Projects />
+        <Awards />
+        <Blog />
+        <GithubActivity />
+        <Contact />
+      </main>
+    </>
   )
 }

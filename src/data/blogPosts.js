@@ -25,6 +25,7 @@ export const blogPosts = [
     category: "Student Developer",
     readTime: "5 min read",
     date: "September 2026",
+    isoDate: "2026-09-01",
     slug: "learning-as-student-software-engineer",
     image: null,
     content: [
@@ -55,6 +56,7 @@ export const blogPosts = [
     category: "Projects",
     readTime: "5 min read",
     date: "August 2026",
+    isoDate: "2026-08-01",
     slug: "building-my-first-real-projects",
     image: null,
     content: [
@@ -98,6 +100,7 @@ export const blogPosts = [
     category: "Full-Stack Development",
     readTime: "6 min read",
     date: "July 2026",
+    isoDate: "2026-07-01",
     slug: "journey-into-full-stack-development",
     image: null,
     content: [
@@ -143,6 +146,7 @@ export const blogPosts = [
     category: "JavaScript",
     readTime: "4 min read",
     date: "June 2026",
+    isoDate: "2026-06-01",
     slug: "learning-javascript-again",
     image: null,
     content: [
@@ -172,6 +176,7 @@ export const blogPosts = [
     category: "Git & GitHub",
     readTime: "5 min read",
     date: "May 2026",
+    isoDate: "2026-05-01",
     slug: "what-git-and-github-taught-me",
     image: null,
     content: [
@@ -212,6 +217,7 @@ export const blogPosts = [
     category: "Collaboration",
     readTime: "6 min read",
     date: "April 2026",
+    isoDate: "2026-04-01",
     slug: "lessons-from-team-project",
     image: null,
     content: [

@@ -1,5 +1,8 @@
+import { useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { FiArrowLeft } from 'react-icons/fi'
+import Seo from '../components/Seo'
+import { SITE_URL, SITE_NAME } from '../data/site'
 import { blogPosts } from '../data/blogPosts'
 
 /**
@@ -9,6 +12,21 @@ import { blogPosts } from '../data/blogPosts'
 export default function FieldNotePage() {
   const { slug } = useParams()
   const post = blogPosts.find((p) => p.slug === slug)
+
+  const articleJsonLd = useMemo(() => {
+    if (!post) return null
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'BlogPosting',
+      headline: post.title,
+      description: post.excerpt,
+      datePublished: post.isoDate,
+      articleSection: post.category,
+      mainEntityOfPage: `${SITE_URL}/field-notes/${post.slug}`,
+      author: { '@type': 'Person', name: SITE_NAME, url: `${SITE_URL}/` },
+      publisher: { '@type': 'Person', name: SITE_NAME, url: `${SITE_URL}/` },
+    }
+  }, [post])
 
   if (!post) {
     return (
@@ -30,7 +48,15 @@ export default function FieldNotePage() {
   }
 
   return (
-    <main className="section-padding pt-32 bg-cream-100 dark:bg-espresso-900 min-h-screen">
+    <>
+      <Seo
+        title={`${post.title} — Rosemary Boahemaa Dwamena`}
+        description={post.excerpt}
+        path={`/field-notes/${post.slug}`}
+        type="article"
+        jsonLd={articleJsonLd}
+      />
+      <main className="section-padding pt-32 bg-cream-100 dark:bg-espresso-900 min-h-screen">
       <article className="max-w-3xl mx-auto">
         {/* Back link */}
         <Link
@@ -62,6 +88,7 @@ export default function FieldNotePage() {
           ))}
         </div>
       </article>
-    </main>
+      </main>
+    </>
   )
 }

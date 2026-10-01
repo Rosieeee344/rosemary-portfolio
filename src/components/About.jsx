@@ -26,6 +26,12 @@ export default function About() {
             eventually cybersecurity. I enjoy learning by building, collaborating with other
             people, and taking on opportunities that push me outside my comfort zone.
           </p>
+           <p>
+            I was recently recognized as the Best ICT Student at the COMPSSA KTU Awards 2026. I am a volunteer and core maintainer at the Codetopia Community, a Xolace Ambassador, and a member of the technical team at SprinTelex. I also serve as the secretary to the Organizer for COMPSSA KTU.
+          </p>
+          <p>
+            I am the founder, team lead and developer at RoreDevs, a community of dev students who learn by building projects together. I am passionate about helping others grow in their careers and sharing my knowledge with the community.
+          </p>
         </div>
       </div>
     </section>
