@@ -36,7 +36,7 @@ export default function Home() {
     <>
       <Seo
         title="Rosemary Boahemaa Dwamena — Student Software Developer"
-        description="Rosemary Boahemaa Dwamena is a student software developer, team lead at RoreDevs, Core maintainer at Codetopia Community, technical team at SprinTelex, and BTech ICT student in Koforidua Technical University, Ghana. Explore her projects, experience, education, awards, and field notes."
+        description="Rosemary Boahemaa Dwamena is a student software developer, founder and team lead at RoreDevs, Core maintainer at Codetopia Community, technical team at SprinTelex, and BTech ICT student in Koforidua Technical University, Ghana. Explore her projects, experience, education, awards, and field notes."
         path="/"
         type="website"
         jsonLd={profilePageJsonLd}

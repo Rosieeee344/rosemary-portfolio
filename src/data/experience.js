@@ -1,21 +1,3 @@
-/**
- * Experience data — internships, work, volunteer and leadership roles.
- * Edit this array to add/remove entries. Each entry maps to a timeline
- * item in the Experience section (see src/components/Experience.jsx).
- *
- * Fields:
- *   organization   — company / community / group name
- *   role           — your position or title
- *   type           — e.g. Internship, Open Source, Technical, Leadership
- *   startDate      — human-readable start date (or 'Present')
- *   endDate        — human-readable end date (leave '' when unknown/ongoing)
- *   description    — one or two sentence summary (optional)
- *   technologies   — tools/skills used (rendered as tags, optional)
- *   achievements   — bullet list of impact/outcomes (optional)
- *
- * NOTE: Keep descriptions concise and don't invent details. Leave fields
- * empty ('' or []) when you have nothing to add yet.
- */
 export const experienceData = [
   {
     id: 1,
@@ -37,19 +19,19 @@ export const experienceData = [
     startDate: 'Present',
     endDate: '',
     description:
-      'Completed my mentorship and internship in the Projects & Open Source department and now contribute as a volunteer maintainer in the open source department.',
+      'Completed my mentorship and internship in the Projects & Open Source department and now contribute as a volunteer maintainer in the Projects and Technical department.',
     technologies: ['Git', 'GitHub', 'Open Source','Teamwork'],
     achievements: [],
   },
   {
     id: 3,
     organization: 'RoreDevs',
-    role: 'Technical / Product Team',
+    role: 'Founder, Developer, Technical / Product Team Lead',
     type: 'Team',
     startDate: 'Present',
     endDate: '',
     description:
-      'Part of the RoreDevs team — contributing to products including Seemul, as well as product ideas and technical direction.',
+      'Founder and Team Lead at RoreDevs — Founded RoreDevs and lead its products and engineering direction, building products including Seemul from concept to launch.',
     technologies: ['Web Development', 'Mobile Development', 'Product Design'],
     achievements: [],
   },

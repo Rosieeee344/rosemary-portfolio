@@ -34,7 +34,7 @@ export const profilePageJsonLd = {
     image: `${SITE_URL}${PROFILE_IMAGE}`,
     jobTitle: 'Student Software Developer',
     description:
-      'Student software developer, team lead at RoreDevs, Core maintainer at Codetopia Community, technical team at SprinTelex, and BTech ICT student from Koforidua, Ghana, building projects across web and full-stack development.',
+      'Student software developer, founder and team lead at RoreDevs, Core maintainer at Codetopia Community, technical team at SprinTelex, and BTech ICT student from Koforidua, Ghana, building projects across web and full-stack development.',
     knowsAbout: [
       'Software Engineering',
       'Full-Stack Development',

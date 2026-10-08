@@ -5,7 +5,7 @@ const typingTexts = [
   'A little bit of everything.',
   'Core Maintainer at Codetopia Community.',
   'Student Developer.',
-  'Tech Entrepreneur.',
+  'Founder and Team Lead at RoreDevs.'
 ]
 
 export default function Hero() {
@@ -91,7 +91,7 @@ export default function Hero() {
               Building scalable, efficient, and user-friendly digital solutions.
             </p>
             <p className="font-body text-sm text-sand-600 dark:text-sand-400 leading-relaxed max-w-md mb-10">
-              Student Developer | Core Maintainer, Codetopia Community | Xolace Ambassador | Technical team @ <a href="https://sprintelex.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-espresso-800 dark:hover:text-cream-200 transition-colors">SprinTelex</a> | COMPSSA KTU secretary to the Organizer | Student Leader | Best ICT Student, COMPSSA KTU Awards 2026
+              Student Developer | Core Maintainer, Codetopia Community | Xolace Ambassador | Technical team @ <a href="https://sprintelex.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-espresso-800 dark:hover:text-cream-200 transition-colors">SprinTelex</a> | COMPSSA KTU secretary to the Organizer | Founder and Team Lead at RoreDevs | Best ICT Student, COMPSSA KTU Awards 2026
             </p>
 
             {/* CTA buttons */}

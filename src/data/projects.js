@@ -6,9 +6,9 @@ export const projects = [
     id: 1,
     title: 'Acadex',
     description:
-      'A university academic management system for course management, student records, and administrative workflows.',
+      'Designed and built Acadex end to end: a geolocation-based attendance and academic management platform for class attendance tracking. I own the architecture database, and deployment, and i maintain it for real users.',
     longDescription:
-      'A full-featured academic management platform for universities, providing tools for course management, student records, and administrative workflows. Designed to streamline academic operations at KTU.',
+      'I designed and built Acadex end to end: a geolocation-based attendance and academic management platform for class attendance tracking. I own the architecture, database, and deployment, and i maintain it for real users.',
     challenge:
       'Modelling complex academic data relationships: courses, students, departments, and timetables, in a way that stays performant under real usage. Building a clean interface that lecturers and administrators both find intuitive.',
     tech: ['React', 'TypeScript', 'Tailwind CSS', 'React Router', 'React Query', 'Supabase'],
